@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <h2>BUILD TO-DO LIST</h2>
+
+    <input type="text" id="taskInput">
+    <button onclick="addele()">ADD</button><br><br>
+
+    <ul id="taskList"></ul>
+    
+
+    <script>
+        function addele(){
+            const taskInput=document.getElementById("taskInput");
+            const taskList=document.getElementBy("tasklist")
+
+            const li=document.createElement("li");
+            li.textContent=taskInput.value;
+
+            const delbutton=document.createElement('button');
+            delbutton.textContent='DELETE';
+
+            delbutton.onclick=function(){
+                taskList.removeChild(li);
+
+            };
+            li.appendChild(delbutton);
+            taskList.appendChild(li);
+
+            taskInput.value="";
+        }
+        function delete(){
+
+        }
+        
+    </script>
+
+
+</body>
+</html>
